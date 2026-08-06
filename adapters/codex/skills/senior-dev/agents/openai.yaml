@@ -1,0 +1,4 @@
+interface:
+  display_name: "Senior Dev Team"
+  short_description: "ทีมวิศวกรอาวุโสสำหรับพัฒนาซอฟต์แวร์ครบวงจร"
+  default_prompt: "Use $senior-dev to plan, build, review, test, and ship this software with the appropriate senior engineering roles."
