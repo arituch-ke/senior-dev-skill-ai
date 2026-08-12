@@ -36,14 +36,20 @@ Repository: `https://github.com/arituch-ke/senior-dev-skill-ai`
 
 ### Codex
 
-Ask Codex:
+#### Option 1: ask Codex in chat (recommended)
+
+Paste the following text into a Codex chat. **Do not run it in Terminal:**
 
 ```text
 Install the senior-dev skill from:
 https://github.com/arituch-ke/senior-dev-skill-ai/tree/main/skills/senior-dev
 ```
 
-Manual user-level install:
+Codex will use its skill installer and make the skill available on the next turn.
+
+#### Option 2: install from Terminal
+
+Clone the repository and copy the skill into your user-level Codex skills directory:
 
 ```bash
 git clone https://github.com/arituch-ke/senior-dev-skill-ai.git
