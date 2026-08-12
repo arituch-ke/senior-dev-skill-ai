@@ -4,9 +4,13 @@ Portable senior engineering workflow for Codex, Claude Code, Cursor, GitHub Copi
 
 ## Capabilities
 
+- Senior Product / Business Analyst: requirements, business rules, user stories, acceptance criteria, and traceability
+- Senior UX/UI Product Designer: journeys, flows, design systems, interaction states, accessibility, and responsive behavior
 - Senior Tech Lead / Architect
 - Senior Frontend: Nuxt 3, Vue 3, TypeScript, Pinia, React, and Next.js
 - Senior Backend: Node.js, NestJS, Fastify, Express, Nitro, PostgreSQL, Redis, Prisma, and Drizzle
+- Senior Data / Database: modeling, integrity, indexes, migrations, query performance, retention, and recovery
+- Senior QA / SDET: risk-based unit, component, contract, integration, E2E, regression, accessibility, and resilience testing
 - Senior DevOps / SRE: Docker, CI/CD, observability, rollback, backup, and cloud deployment
 - Senior Security: secure design and review, trust boundaries, secrets, dependency risk, and OWASP-oriented controls
 
@@ -17,6 +21,7 @@ The Tech Lead selects only the roles needed for a task. Actual parallel agents d
 ```text
 core/senior-dev.md                         Canonical, vendor-neutral instructions
 skills/senior-dev/                         Codex-compatible install path
+skills/senior-dev/references/              Kanban branching and generic CI/CD workflow references
 adapters/codex/skills/senior-dev/          Codex adapter copy
 adapters/claude-code/.claude/skills/       Claude Code Agent Skill
 adapters/cursor/.cursor/rules/              Cursor Project Rule
@@ -27,7 +32,7 @@ adapters/generic/AGENTS.md                  Generic agent instructions
 
 ## Install
 
-Replace `YOUR_GITHUB_USERNAME/YOUR_REPOSITORY` with the published repository address.
+Repository: `https://github.com/arituch-ke/senior-dev-skill-ai`
 
 ### Codex
 
@@ -35,15 +40,15 @@ Ask Codex:
 
 ```text
 Install the senior-dev skill from:
-https://github.com/YOUR_GITHUB_USERNAME/YOUR_REPOSITORY/tree/main/skills/senior-dev
+https://github.com/arituch-ke/senior-dev-skill-ai/tree/main/skills/senior-dev
 ```
 
 Manual user-level install:
 
 ```bash
-git clone https://github.com/YOUR_GITHUB_USERNAME/YOUR_REPOSITORY.git
+git clone https://github.com/arituch-ke/senior-dev-skill-ai.git
 mkdir -p "${CODEX_HOME:-$HOME/.codex}/skills"
-cp -R YOUR_REPOSITORY/skills/senior-dev "${CODEX_HOME:-$HOME/.codex}/skills/senior-dev"
+cp -R senior-dev-skill-ai/skills/senior-dev "${CODEX_HOME:-$HOME/.codex}/skills/senior-dev"
 ```
 
 Use it on the next turn with `$senior-dev`.
@@ -109,6 +114,10 @@ Review this repository as the Senior Dev Team. Prioritize correctness, maintaina
 Productionize this API using the Senior Dev Team. Do not deploy or change production secrets without my explicit approval.
 ```
 
+```text
+Use the Senior Dev Team to define acceptance criteria, design the UX flow, implement the feature, and have QA verify it independently before release readiness review.
+```
+
 ## Compatibility notes
 
 - The canonical workflow is vendor-neutral.
@@ -121,8 +130,7 @@ Productionize this API using the Senior Dev Team. Do not deploy or change produc
 
 1. Create an empty GitHub repository.
 2. Upload this directory's contents at the repository root.
-3. Replace every `YOUR_GITHUB_USERNAME/YOUR_REPOSITORY` placeholder in this README.
-4. Commit and push.
-5. Share the repository URL, or the `skills/senior-dev` tree URL for direct Codex installation.
+3. Commit and push.
+4. Share the repository URL, or the `skills/senior-dev` tree URL for direct Codex installation.
 
 No license is included. Add the license you want before public distribution or external contributions.
