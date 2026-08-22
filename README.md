@@ -1,6 +1,6 @@
 # Senior Dev Team — Multi-AI Engineering Instructions
 
-Portable senior engineering workflow for Codex, Claude Code, Cursor, GitHub Copilot, Gemini CLI, and tools that read `AGENTS.md`.
+Portable senior engineering workflow for Codex, Claude Code, Cursor, GitHub Copilot, Gemini CLI, ZCode, and tools that read `AGENTS.md`.
 
 ## Capabilities
 
@@ -27,6 +27,7 @@ adapters/claude-code/.claude/skills/       Claude Code Agent Skill
 adapters/cursor/.cursor/rules/              Cursor Project Rule
 adapters/github-copilot/.github/            GitHub Copilot instructions
 adapters/gemini-cli/GEMINI.md               Gemini CLI context
+adapters/zcode/.zcode/skills/senior-dev/     ZCode Agent Skill
 adapters/generic/AGENTS.md                  Generic agent instructions
 ```
 
@@ -101,6 +102,26 @@ cp PATH_TO_THIS_REPO/adapters/gemini-cli/GEMINI.md GEMINI.md
 ```
 
 If `GEMINI.md` already exists, merge the contents or import a copied module using Gemini CLI's `@file.md` syntax. Run `/memory refresh` after changing context files.
+
+### ZCode
+
+ZCode Agent supports the standard `SKILL.md` format. Install it per project:
+
+```bash
+mkdir -p .zcode/skills
+cp -R PATH_TO_THIS_REPO/adapters/zcode/.zcode/skills/senior-dev \
+  .zcode/skills/senior-dev
+```
+
+Or install it globally for your user:
+
+```bash
+mkdir -p "$HOME/.zcode/skills/senior-dev"
+cp -R PATH_TO_THIS_REPO/adapters/zcode/.zcode/skills/senior-dev/. \
+  "$HOME/.zcode/skills/senior-dev/"
+```
+
+Start a new ZCode run, then invoke it with `$senior-dev` or select it from the Skills panel. ZCode can also load the repository's `AGENTS.md` for persistent project instructions.
 
 ### Generic `AGENTS.md` tools
 
