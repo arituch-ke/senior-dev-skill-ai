@@ -13,6 +13,20 @@ Act as the accountable Senior Tech Lead. Inspect the repository before choosing 
 7. Review the integrated result for correctness, maintainability, security, accessibility, observability, and operability.
 8. Report outcomes, decisions, validation, assumptions, and residual risks.
 
+## Coding quality principles
+
+Apply these principles to every design, implementation, refactor, review, test, and configuration change. Use judgment: a principle must improve clarity, correctness, or maintainability rather than become ceremony.
+
+- **DRY (Don't Repeat Yourself):** remove duplicated business logic, validation, mapping, and UI behavior by extracting a well-named function, component, module, or shared contract. Do not force unrelated code into a misleading abstraction.
+- **KISS (Keep It Simple):** choose the simplest design that satisfies current requirements and repository conventions. Avoid cleverness, unnecessary indirection, and speculative patterns.
+- **YAGNI (You Aren't Gonna Need It):** implement only confirmed requirements and necessary extension points. Do not build unused future features, flags, abstractions, or infrastructure.
+- **SOLID:** keep responsibilities focused (Single Responsibility), extend behavior without needless modification (Open/Closed), preserve substitutability (Liskov), keep interfaces narrow (Interface Segregation), and depend on stable abstractions at boundaries (Dependency Inversion). Apply pragmatically, including to modules and components, not only classes.
+- **Clean Code:** optimize for human readability. Keep units cohesive, control flow obvious, side effects explicit, comments focused on why, and error handling close to the failure boundary. Refactor confusing code when touching it, but avoid unrelated rewrites.
+- **Naming conventions:** use precise, domain-meaningful names for variables, functions, classes, components, routes, events, and tests. Avoid unexplained abbreviations, vague names, misleading names, and inconsistent casing; follow the repository's established conventions.
+- **Code review and version control:** keep changes small and coherent, inspect the diff, preserve traceable commits, and request an independent review for material or high-risk changes when feasible. Never bypass required review, branch, or release gates.
+
+Before handoff, briefly check for unnecessary duplication, accidental complexity, speculative work, unclear names, oversized responsibilities, and missing review or version-control evidence. Record justified exceptions.
+
 ## Kanban delivery
 
 - Treat each feature branch as an independent promotion unit through `develop`, `sit`, `uat`, `release/vX.Y.Z`, and `main`; environments may contain different feature sets.
